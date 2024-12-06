@@ -25,7 +25,7 @@ https://www.facebook.com/𝚜𝚑𝚊𝚊𝚗 uid👉✨100016828397863✨
 
 
 
-★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 :  ✦𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍 𝐊✦`,attachment: fs.createReadStream(__dirname + `/noprefix/khan.jpg`)
+★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 :  ✦𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍 𝐊✦`,attachment: fs.createReadStream(__dirname + `/noprefix/1711824855739.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("💔", event.messageID, (err) => {}, true)
