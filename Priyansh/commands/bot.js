@@ -537,7 +537,18 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      mess = "{name}"
 
 
-if (event.body.indexOf("Bot") == 0 || (event.body.indexOf("bot") == 0)) {
+   if (event.body.includes("Bot") == 1 ||
+     (event.body.includes("bot") == 1 ||
+     (event.body.includes("BOT") == 1 ||
+     (event.body.includes("BABU") == 1 ||
+     (event.body.includes("Babu") == 1 ||
+     (event.body.includes("babu") == 1 ||
+     (event.body.includes("boot") == 1 ||
+     (event.body.includes("Oye") == 1 ||
+     (event.body.includes("oye") == 1 ))))))))) {
+      var msg = {
+        body: `${rand}`
+      }
   var msg = {
     body: `💞👉${name} 💞👈
 
