@@ -2,7 +2,7 @@ module.exports.config = {
         name: "joinNoti",
         eventType: ["log:subscribe"],
         version: "1.0.1",
-        credits: "CatalizCS", //fixing ken gusler
+        credits: "uzairrajput",
         description: "Notify bot or group member with random gif/photo/video",
         dependencies: {
                 "fs-extra": "",
@@ -31,35 +31,35 @@ module.exports.run = async function({ api, event }) {
         if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
                 api.changeNickname(`{ ${global.config.PREFIX} } × ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
                 const fs = require("fs");
-                return api.sendMessage("Assalamu Alaikum Everyone🥀🥀", event.threadID, () => api.sendMessage({body:`🌺Shaan🦋🌺 CONNECTED«
+                return api.sendMessage("Assalamualaikum Everyone 😇✨", event.threadID, () => api.sendMessage({body:`🌺 𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿 💚✨ 𓆩『 ⸙ 𝑫𝑰𝑾𝑨𝑵𝑰 𝑻𝑬𝑹𝑰 』𓆪 【 𝑩𝑶𝑻 】 🦋🌺 CONNECTED«
 
-Bot Made By SHAAN KHAN K☘️
-<------------------------------>  
+𝑻𝒉𝒊𝒔 𝑩𝒐𝒕 𝑴𝒂𝒅𝒆 𝑩𝒚 𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿 💚✨
+◈───────────────── 💚✨  
 BOT CONNECTED SUCCESFUL !!! 
 
 APPROVAL ALLOW IN THIS GROUP!!!
-<------------------------------>
+◈───────────────── 💚✨
 
 USE HELP TO SEE COMMAND 
 \n\nUse ${global.config.PREFIX}help to see commands.\n\nexample :\n${global.config.PREFIX}video7 (video songs)\n${global.config.PREFIX}music (audio songs)\n${global.config.PREFIX}help2 (command list)\n${global.config.PREFIX}info 
-<<<<<------------------------------>>>>>
-AND FOR ANY REPORT OR CONTACT BOT DEVELOPER
+◈───────────────── 💚✨
+AND FOR ANY REPORT OR CONTACT BOT DEVELOPER\n◈───────────────── 💚✨
 
-OWNER: 𝐒𝐇𝐀𝐀𝐍
+𝑶𝒘𝒏𝒆𝒓: 𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿\n◈───────────────── 💚✨
 
 ♻️Facebook: 
 
-https://www.facebook.com/profile.php?id=100016828397863&mibextid=ZbWKwL
+https://www.facebook.com/Mtxuzair\n◈───────────────── 💚✨
 
-Youtube Site : N/A
+Youtube Site : https://youtube.com/@itxuzair449?si=pO1Dv9pz2BmyK3Rc\n◈───────────────── 💚✨
 
-☢️ INSTAGRAM: N/A
+☢️ INSTAGRAM: 
 
-https://www.instagram.com/shankhank345?igsh=MXVneXZ6bzR4bHhvcg==￼
+https://www.instagram.com/itxuzair449/profilecard/?igsh=bzRuemE4cWE0cDBy￼\n◈───────────────── 💚✨
 
-☣️Email: shankhank345@gmail.com
+☣️Email: uzairrajput1267@gmail.com
 
-⚠️Wp: +92 3368783346 `, attachment: fs.createReadStream(__dirname + "/cache/Mivo1707223546393.mp4")} ,threadID));
+⚠️Wp: +92 3198188449`, attachment: fs.createReadStream(__dirname + "/cache/uzair.mp4")} ,threadID));
         }
         else {
                 try {
@@ -80,7 +80,7 @@ https://www.instagram.com/shankhank345?igsh=MXVneXZ6bzR4bHhvcg==￼
                         }
                         memLength.sort((a, b) => a - b);
 
-                        (typeof threadData.customJoin == "undefined") ? msg = "𝐖𝐞𝐥𝐜𝐨𝐦𝐞   𝐓𝐨  𝐒𝐡𝐚𝐚𝐧  𝐊𝐡𝐚𝐧  𝐁𝐨𝐭  😇● ========================= ●\n● ======= 𝐇𝐄𝐋𝐋𝐎 𝐁𝐀𝐁𝐘 ======= ●\n● ========================= ●\n\n● ==== 🆆 🅴🅻🅻 🅲🅾🅼 🅴 ==== ●\n\n● ========= 𝐍𝐄𝐖 ========= ●\n\n● ==== 🇲‌ 🇪‌ 🇲‌ 🇧‌ 🇪‌ 🇷‌ ==== ●\n\n● ========================= ● [   {name} ]\n● ========================= ●\n● ====== 𝐌𝐘 𝐆𝐑𝐎𝐔𝐏 ===== ●\n\n{threadName}\n\n● = 🥀 𝐇𝐀𝐏𝐏𝐘 𝐄𝐍𝐉𝐎𝐘 🥀 = ●\n\n● == 🥀 𝐌𝐀𝐉𝐄 𝐊𝐀𝐑𝐎 🥀  == ●\n● ========================= ● 𝐎𝐑 𝐓𝐔𝐌 𝐈𝐒 𝐆𝐑𝐎𝐔𝐏 𝐊𝐄  {soThanhVien} 𝐌𝐄𝐌𝐁𝐀𝐑 𝐇𝐎 𝐄𝐍𝐉𝐎𝐘 𝐊𝐀𝐑𝐎 𝐌𝐀𝐉𝐄 𝐋𝐎 [ . ] ● ========================= ●\n\n● ========================= ●\n● ======= 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 ====== ●\n\n☟  ========== ☟ ==========  ☟\n\n=𝐎𝐰𝐧𝐞𝐫 ➻    🌹 𝐒𝐡𝐚𝐚𝐧 𝐊𝐡𝐚𝐧 𝐊 🌹\n● ========================= ●" : msg = threadData.customJoin;
+                        (typeof threadData.customJoin == "undefined") ? msg = "𝐖𝐞𝐥𝐜𝐨𝐦𝐞   𝐓𝐨  𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿 💚✨ 𝐁𝐨𝐭  😇◈───────────────── 💚✨\n◈ ──── 💚✨  𝐇𝐄𝐋𝐋𝐎 𝐁𝐀𝐁𝐘 ◈ ──── 💚✨\n◈───────────────── 💚✨\n\n◈ ──── 💚✨ 🆆 🅴🅻🅻 🅲🅾🅼 🅴 ◈ ──── 💚✨\n\n◈ ──── 💚✨ 𝐍𝐄𝐖 ◈ ──── 💚✨\n\n◈ ──── 💚✨ 🇲‌ 🇪‌ 🇲‌ 🇧‌ 🇪‌ 🇷‌ ◈ ──── 💚✨\n\n◈───────────────── 💚✨ [   {name} ]\n◈───────────────── 💚✨\n◈ ──── 💚✨ 𝐌𝐘 𝐆𝐑𝐎𝐔𝐏 ◈ ──── 💚✨\n\n{threadName}\n\n◈ ──── 💚✨ 🥀 𝐇𝐀𝐏𝐏𝐘 𝐄𝐍𝐉𝐎𝐘 🥀 ◈ ──── 💚✨\n\n◈ ──── 💚✨ 🥀 𝐌𝐀𝒁𝐄 𝐊𝐀𝐑𝐎 🥀  ◈ ──── 💚✨\n◈───────────────── 💚✨ 𝐎𝐑 𝐓𝐔𝐌 𝐈𝐒 𝐆𝐑𝐎𝐔𝐏 𝐊𝐄  {soThanhVien} 𝐌𝐄𝐌𝐁𝐀𝐑 𝐇𝐎 𝐄𝐍𝐉𝐎𝐘 𝐊𝐀𝐑𝐎 𝐌𝐀𝒁𝐄 𝐋𝐎 [ . ] ◈───────────────── 💚✨\n\n◈───────────────── 💚✨\n◈ ──── 💚✨ 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 ◈ ──── 💚✨\n\n☟  ◈ ──── 💚✨ ☟ ◈ ──── 💚✨  ☟\n\n=𝐎𝐰𝐧𝐞𝐫 ➻    🌹 𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿 🌹\n◈───────────────── 💚✨" : msg = threadData.customJoin;
                         msg = msg
                         .replace(/\{name}/g, nameArray.join(', '))
                         .replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
