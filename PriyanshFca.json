@@ -3,7 +3,7 @@
 	"PreKey": "",
 	"AutoUpdate": true,
 	"MainColor": "#9900FF",
-	"MainName": "[ FCA-PRIYANSH ]",
+	"MainName": "[ 𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿 ]",
 	"Uptime": false,
 	"Config": "default",
 	"DevMode": false,
@@ -20,7 +20,7 @@
 	"Websocket_Extension": {
 		"Status": false,
 		"ResetData": false,
-		"AppState_Path": "appstate.json"
+		"AppState_Path": "𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿.json"
 	},
 	"HTML": {
 		"HTML": true,
