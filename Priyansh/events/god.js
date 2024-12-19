@@ -2,49 +2,62 @@ module.exports.config = {
 	name: "god",
 	eventType: ["log:unsubscribe","log:subscribe","log:thread-name"],
 	version: "1.0.0",
-	credits: "𝙋𝙧𝙞𝙮𝙖𝙣𝙨𝙝 𝙍𝙖𝙟𝙥𝙪𝙩",
-	description: "Record bot activity notifications!",
+	credits: "uzairrajput",
+	description: "Record notifications of bot activities!",
     envConfig: {
         enable: true
     }
 };
 
-module.exports.run = async function({ api, event, Threads }) {
+module.exports.run = async function({ api, event, Threads, args, Users }) {
+	
+	 var datathread = await api.getThreadInfo(event.threadID);
+     var namethread = datathread.name;
+	 
+    const moment = require("moment-timezone");
+    var gio = moment.tz("Asia/Karachi").format("HH:mm:ss D/MM/YYYY");
+	
     const logger = require("../../utils/log");
     if (!global.configModule[this.config.name].enable) return;
-    var formReport =  "=== Bot Notification ===" +
-                        "\n\n» Thread mang ID: " + event.threadID +
-                        "\n» Action: {task}" +
-                        "\n» Action created by userID: " + event.author +
-                        "\n» " + Date.now() +" «",
-        task = "";
+    var formReport =  "•——𝗕𝗼𝘁 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻——•" +
+	                "\n-----------------------\n» 𝖦𝗋𝗈𝗎𝗉𝖭𝖺𝗆𝖾: " + `${namethread}` +
+                        "\n» 𝖳𝗂𝖽 𝖨'𝖽: " + event.threadID +
+                        "\n» 𝖳𝖺𝗌𝗄: {task}" +
+                        "\n» 𝖭𝖺𝗆𝖾: " + (await Users.getData(event.author)).name +
+                        "\n» 𝖴𝗌𝖾𝗋𝖨𝖣 : \n» " + event.author + " «" +
+                        "\n» " + Date.now() +" «" +
+			"\n-----------------------\n" +
+			`Time: ${gio}`,
+						
+	   task = "";
+	
     switch (event.logMessageType) {
         case "log:thread-name": {
             const oldName = (await Threads.getData(event.threadID)).name || "Name does not exist",
-                    newName = event.logMessageData.name || "Name does not exist";
-            task = "User changes group name from: '" + oldName + "' to '" + newName + "'";
+                    newName = event.logMessageData.name || "Walang pangalan";
+            task = "The user changed the group name from: '" + oldName + "' defense '" + newName + "'";
             await Threads.setData(event.threadID, {name: newName});
             break;
         }
         case "log:subscribe": {
-            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "The user added the bot to a new group!";
+            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "added by group!";
             break;
         }
         case "log:unsubscribe": {
-            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "The user kicked the bot out of the group!"
+            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "Bot has been kicked out of the group!"
             break;
         }
         default: 
             break;
     }
 
-    if (task.length == 0) return;
+        if (task.length == 0) return;
 
     formReport = formReport
     .replace(/\{task}/g, task);
-  var god = "100016828397863";
+  var god = "61552682190483";
 
     return api.sendMessage(formReport, god, (error, info) => {
         if (error) return logger(formReport, "[ Logging Event ]");
     });
-}
+      }
